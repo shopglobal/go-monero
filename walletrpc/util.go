@@ -31,10 +31,10 @@ func NewPaymentID256() string {
 func XMRToDecimal(xmr uint64) string {
 	str0 := fmt.Sprintf("%013d", xmr)
 	l := len(str0)
-	return str0[:l-12] + "." + str0[l-12:]
+	return str0[:l-2] + "." + str0[l-2:]
 }
 
 // XMRToFloat64 converts raw atomic XMR to a float64
 func XMRToFloat64(xmr uint64) float64 {
-	return float64(xmr) / 1e12
+	return float64(xmr) / 1e2 //1e2 for ETNX || 1e12 for XMR
 }
