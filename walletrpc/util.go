@@ -29,7 +29,7 @@ func NewPaymentID256() string {
 // XMRToDecimal converts a raw atomic XMR balance to a more
 // human readable format.
 func XMRToDecimal(xmr uint64) string {
-	str0 := fmt.Sprintf("%013d", xmr)
+	str0 := fmt.Sprintf("%03d", xmr)
 	l := len(str0)
 	return str0[:l-2] + "." + str0[l-2:]
 }
